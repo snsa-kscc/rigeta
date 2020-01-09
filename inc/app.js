@@ -72,20 +72,38 @@ function initMap() {
       }
     ]
   });
-  addMarker({ coords: { lat: 45.791, lng: 16.062 } });
-  addMarker({ coords: { lat: 45.777, lng: 15.996 } });
-  addMarker({ coords: { lat: 45.8178, lng: 16.0082 } });
+
+  addMarker({
+    coords: { lat: 45.791, lng: 16.062 },
+    contentHr: "dsdsd",
+    contentEn: "engleskifdfj"
+  });
+  addMarker({
+    coords: { lat: 45.777, lng: 15.996 },
+    contentHr: "dsdsdsdsdsds",
+    contentEn: "engleskifdfj"
+  });
+  addMarker({
+    coords: { lat: 45.8178, lng: 16.0082 },
+    contentHr: "dsdsdsd",
+    contentEn: "engleskifdfj"
+  });
+
   function addMarker(props) {
+    let infowindow = new google.maps.InfoWindow();
     let marker = new google.maps.Marker({
       position: props.coords,
       map: map,
       icon: location.origin + "/wp-content/uploads/marker.png"
     });
+
+    marker.addListener("click", function() {
+      infowindow.open(map, marker);
+      if (location.pathname == "/kontakt/") {
+        infowindow.setContent(props.contentHr);
+      } else if (location.pathname == "/contact/") {
+        infowindow.setContent(props.contentEn);
+      }
+    });
   }
-  // let infoWindow = new google.maps.infoWindow({
-  //   content: props.content
-  // });
-  // marker.addListener("click", function() {
-  //   infoWindow.open(map, marker);
-  // });
 }
