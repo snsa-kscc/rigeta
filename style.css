@@ -1,0 +1,202 @@
+/*
+Updated: 2019-12-13 12:00:11
+Theme Name: Rigeta
+Theme URI: https://rigeta.hr
+Template: hello-elementor
+Author: dvasadva d.o.o.
+Author URI: https://dvasadva.com
+Description: Corporate theme for rigeta d.o.o.
+Tags: flexible-header,custom-colors,custom-menu,custom-logo,featured-images,rtl-language-support,threaded-comments,translation-ready
+Version: 1.0.1576234811
+*/
+
+a {
+  color: #ffffff;
+  transition: 0.5s;
+}
+a:hover {
+  color: #d41418;
+  transition: 0.5s;
+}
+.site-header {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 110px;
+  position: fixed;
+  top: 0;
+  max-width: 100%;
+  width: 100%;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  left: 0;
+  z-index: 100;
+  padding: 10px 50px 10px 60px;
+}
+.site-branding {
+  max-width: 170px;
+  float: left;
+}
+.site-navigation ul.menu {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Expletus Sans", sans-serif;
+  float: right;
+  padding: 0;
+  margin: 0;
+}
+.site-navigation ul.menu li a {
+  display: inline-block;
+  color: #012130;
+  position: relative;
+  -moz-transition: color ease 0.3s;
+  -webkit-transition: color ease 0.3s;
+  -o-transition: color ease 0.3s;
+  transition: color ease 0.3s;
+  padding: 20px;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+.admin-bar .site-header {
+  top: 46px;
+}
+#map {
+  height: 500px;
+  position: absolute;
+}
+.site-header-white {
+  background-color: rgba(255, 255, 255, 0.99);
+  padding: 10px 20px 10px 30px;
+}
+.site-branding img {
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.site-navigation ul.menu li a::after {
+  content: "";
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+.site-navigation ul.menu li a:hover {
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.site-navigation ul.menu li a:hover::after {
+  height: 100%;
+}
+.burger {
+  display: none;
+}
+.burger div {
+  background-color: #012130;
+  height: 3px;
+  width: 25px;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: 5px;
+}
+.site-navigation ul.menu-active {
+  -webkit-clip-path: circle(1300px at 90% -10%);
+  clip-path: circle(1300px at 90% -10%);
+}
+from {
+  -moz-transform: translateX(50px);
+  -webkit-transform: translateX(50px);
+  -o-transform: translateX(50px);
+  transform: translateX(50px);
+  opacity: 0;
+}
+to {
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+.toggle .line1 {
+  -moz-transform: rotate(-45deg) translate(-5px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+  -o-transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  -moz-transform: rotate(45deg) translate(-5px, -6px);
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+  -o-transform: rotate(45deg) translate(-5px, -6px);
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+@media screen and (max-width: 1023px) {
+  body {
+    overflow-x: hidden;
+  }
+  .site-header {
+    padding: 10px 40px;
+  }
+  .site-header-white {
+    padding: 10px 20px;
+  }
+  .site-navigation ul.menu {
+    background-color: #fdf7ed;
+    height: 100vh;
+    position: absolute;
+    top: 110px;
+    width: 100%;
+    -moz-transition: all 0.7s ease-out;
+    -webkit-transition: all 0.7s ease-out;
+    -o-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+    -webkit-clip-path: circle(10px at 90% -10%);
+    clip-path: circle(10px at 90% -10%);
+    align-items: center;
+    flex-direction: column;
+    right: 0;
+  }
+  .site-navigation ul.menu li {
+    opacity: 0;
+  }
+  .burger {
+    cursor: none;
+  }
+  .burger-show {
+    display: block;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 767px) {
+  .site-branding {
+    max-width: 140px;
+  }
+  .site-header {
+    height: auto;
+  }
+  .site-navigation ul.menu {
+    top: 100px;
+  }
+}
+@media screen and (min-width: 783px) {
+  .admin-bar .site-header {
+    top: 32px;
+  }
+}
+.mfp-counter {
+  display: none;
+}
