@@ -82,7 +82,6 @@ function initMap() {
       icon: location.origin + "/wp-content/uploads/marker.png"
     });
   }
-  //neki testni kometa
   // let infoWindow = new google.maps.infoWindow({
   //   content: props.content
   // });
