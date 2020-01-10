@@ -40,6 +40,17 @@ const app = () => {
 
 app();
 
+const fileInput = document.querySelector("#form-field-field_1");
+const changeText = document.querySelector(".elementor-field-label");
+
+fileInput.addEventListener("input", () => {
+  if (location.pathname == "/posao/") {
+    changeText.innerHTML = "Učitano";
+  } else if (location.pathname == "/work/") {
+    changeText.innerHTML = "Loaded";
+  }
+});
+
 function initMap() {
   let map = new google.maps.Map(document.getElementById("gmap"), {
     zoom: 12,
@@ -97,7 +108,7 @@ function initMap() {
       icon: location.origin + "/wp-content/uploads/marker.png"
     });
 
-    marker.addListener("click", function() {
+    marker.addListener("click", () => {
       infowindow.open(map, marker);
       if (location.pathname == "/kontakt/") {
         infowindow.setContent(props.contentHr);
