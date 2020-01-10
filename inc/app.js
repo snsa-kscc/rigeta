@@ -46,8 +46,24 @@ const changeText = document.querySelector(".elementor-field-label");
 fileInput.addEventListener("input", () => {
   if (location.pathname == "/posao/") {
     changeText.innerHTML = "Učitano";
+    fileInput.style.visibility = "hidden";
+    if (document.querySelector(".elementor-message-danger") !== null) {
+      let x, i;
+      x = document.querySelectorAll(".elementor-message");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+    }
   } else if (location.pathname == "/work/") {
     changeText.innerHTML = "Loaded";
+    fileInput.style.visibility = "hidden";
+    if (document.querySelector(".elementor-message-danger") !== null) {
+      let x, i;
+      x = document.querySelectorAll(".elementor-message");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+    }
   }
 });
 
@@ -118,3 +134,11 @@ function initMap() {
     });
   }
 }
+
+$("#form-field-field_1").bind("change", function() {
+  if (this.files[0].size > 4194304) {
+    document.querySelector(".elementor-button").disabled = true;
+  } else if (this.files[0].size <= 4194304) {
+    document.querySelector(".elementor-button").disabled = false;
+  }
+});
