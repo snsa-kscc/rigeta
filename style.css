@@ -64,9 +64,8 @@ body.no-scroll {
 .admin-bar .site-header {
   top: 46px;
 }
-#map {
-  height: 500px;
-  position: absolute;
+#gmap {
+  height: 550px;
 }
 .site-header-white {
   background-color: rgba(255, 255, 255, 0.99);
@@ -111,23 +110,21 @@ body.no-scroll {
   transition: all 0.3s ease;
   margin: 5px;
 }
-.site-navigation ul.menu-active {
-  -webkit-clip-path: circle(1300px at 90% -10%);
-  clip-path: circle(1300px at 90% -10%);
-}
-from {
-  -moz-transform: translateX(50px);
-  -webkit-transform: translateX(50px);
-  -o-transform: translateX(50px);
-  transform: translateX(50px);
-  opacity: 0;
-}
-to {
-  -moz-transform: translateX(0);
-  -webkit-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
-  opacity: 1;
+@keyframes navLinkFade {
+  from {
+    -moz-transform: translateX(50px);
+    -webkit-transform: translateX(50px);
+    -o-transform: translateX(50px);
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 .toggle .line1 {
   -moz-transform: rotate(-45deg) translate(-5px, 6px);
@@ -199,4 +196,45 @@ to {
 }
 .mfp-counter {
   display: none;
+}
+.site-navigation ul.menu-active {
+  -webkit-clip-path: circle(1300px at 90% -10%);
+  clip-path: circle(1300px at 90% -10%);
+}
+.elementor-widget-wp-widget-polylang .elementor-widget-container::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  content: "";
+  height: 44px;
+  border: solid 2px #fff;
+  background-color: #fff0;
+  border-radius: 4px;
+  width: 80%;
+}
+.elementor-widget-container select {
+  width: 80%;
+  height: 44px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: none;
+  position: relative;
+  z-index: 1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+}
+.elementor-widget-wp-widget-polylang .elementor-widget-container::before {
+  position: absolute;
+  right: 25%;
+  top: 20px;
+  z-index: 1;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: #d41418 transparent transparent transparent;
 }
