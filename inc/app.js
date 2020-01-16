@@ -68,6 +68,12 @@ fileInput.addEventListener("input", () => {
 });
 
 function initMap() {
+  let pozicijaMaksimir = `<a href="https://www.google.com/maps/place/Maksimirska+cesta+89,+10000,+Zagreb/@45.8178244,16.006017,17z/data=!3m1!4b1!4m5!3m4!1s0x4765d7b72dba1a7f:0x115ffba7650b84fb!8m2!3d45.8178207!4d16.0082057">Pokreni navigaciju</a>`;
+  let pozicijaUtrine = `<a href="https://www.google.com/maps/dir//Tr%C5%BEnica+Utrina,+Bar%C4%8Dev+trg,+10000,+Zagreb/@45.7770846,15.9941418,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4765d60b90bc6d95:0xc627f81c5a04af83!2m2!1d15.9963305!2d45.7770809!3e0">Pokreni navigaciju</a>`;
+  let pozicijaZitnjak = `<a href="https://www.google.com/maps/dir//Rigeta+d.o.o.,+%C5%BDitnjak+Bogdani+66,+10000,+Zagreb/@45.7907829,16.0597808,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x476678ee445868ad:0x396554d840b36736!2m2!1d16.0619695!2d45.7907792!3e0">Pokreni navigaciju</a>`;
+  let positionMaksimir = `<a href="https://www.google.com/maps/place/Maksimirska+cesta+89,+10000,+Zagreb/@45.8178244,16.006017,17z/data=!3m1!4b1!4m5!3m4!1s0x4765d7b72dba1a7f:0x115ffba7650b84fb!8m2!3d45.8178207!4d16.0082057">Start navigation</a>`;
+  let positionUtrine = `<a href="https://www.google.com/maps/dir//Tr%C5%BEnica+Utrina,+Bar%C4%8Dev+trg,+10000,+Zagreb/@45.7770846,15.9941418,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4765d60b90bc6d95:0xc627f81c5a04af83!2m2!1d15.9963305!2d45.7770809!3e0">Start navigation</a>`;
+  let positionZitnjak = `<a href="https://www.google.com/maps/dir//Rigeta+d.o.o.,+%C5%BDitnjak+Bogdani+66,+10000,+Zagreb/@45.7907829,16.0597808,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x476678ee445868ad:0x396554d840b36736!2m2!1d16.0619695!2d45.7907792!3e0">Start navigation</a>`;
   let map = new google.maps.Map(document.getElementById("gmap"), {
     zoom: 12,
     center: { lat: 45.793, lng: 16.022 },
@@ -102,18 +108,18 @@ function initMap() {
 
   addMarker({
     coords: { lat: 45.791, lng: 16.062 },
-    contentHr: "dsdsd",
-    contentEn: "engleskifdfj"
+    contentHr: "<h4>Žitnjak bogdani</h4>" + pozicijaZitnjak,
+    contentEn: "<h4>Žitnjak bogdani</h4>" + positionZitnjak
   });
   addMarker({
     coords: { lat: 45.777, lng: 15.996 },
-    contentHr: "dsdsdsdsdsds",
-    contentEn: "engleskifdfj"
+    contentHr: "<h4>Tržnica Utrine</h4>" + pozicijaUtrine,
+    contentEn: "<h4>Utrine market</h4>" + positionUtrine
   });
   addMarker({
     coords: { lat: 45.8178, lng: 16.0082 },
-    contentHr: "dsdsdsd",
-    contentEn: "engleskifdfj"
+    contentHr: "<h4>Maksimirska</h4>" + pozicijaMaksimir,
+    contentEn: "<h4>Maksimir st</h4>" + positionMaksimir
   });
 
   function addMarker(props) {

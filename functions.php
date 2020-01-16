@@ -43,3 +43,8 @@ function add_file_types_to_uploads($file_types){
 
 }
 add_filter('upload_mimes', 'add_file_types_to_uploads');
+
+function currentYear( $atts ){
+    return date('Y');
+}
+add_shortcode( 'year', 'currentYear' );
