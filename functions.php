@@ -20,7 +20,7 @@ add_action('wp_enqueue_scripts', 'include_custom_scripts');
 
 function include_gmaps_script() {
     if( is_page( 'kontakt' ) || is_page( 'contact' ) ){
-    wp_enqueue_script('gmaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD--JrCG5n1ImJ-4oHD3KdVjCTsPD5hVJw&callback=initMap', array(), null, true);
+    wp_enqueue_script('gmaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCzUF_TFlhJk1jYR_8I7vqcD0JTCoiDTIE&callback=initMap', array(), null, true);
     }
 
 }

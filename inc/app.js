@@ -54,7 +54,7 @@ fileInput.addEventListener("input", () => {
         x[i].style.display = "none";
       }
     }
-  } else if (location.pathname == "/work/") {
+  } else if (location.pathname == "/en/career/") {
     changeText.innerHTML = "Loaded";
     fileInput.style.visibility = "hidden";
     if (document.querySelector(".elementor-message-danger") !== null) {
@@ -134,7 +134,7 @@ function initMap() {
       infowindow.open(map, marker);
       if (location.pathname == "/kontakt/") {
         infowindow.setContent(props.contentHr);
-      } else if (location.pathname == "/contact/") {
+      } else if (location.pathname == "/en/contact/") {
         infowindow.setContent(props.contentEn);
       }
     });

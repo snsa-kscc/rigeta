@@ -182,9 +182,9 @@ body.no-scroll {
   .site-branding {
     max-width: 140px;
   }
-  .site-header {
+  /* .site-header {
     height: auto;
-  }
+  } */
   .site-navigation ul.menu {
     top: 100px;
   }
